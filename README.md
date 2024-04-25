@@ -32,7 +32,7 @@ The predicted digit is then returned to the user as a JSON response.
 The API can classify the digit images that were used. 
 The model performed well on images for task 1 since those resembled the images on which the model had been trained.
 Since the model was built on the MNIST dataset, which has images with white text and black backgrounds, it could not correctly identify the **digit** image.
-The model could also not accurately predict the images **digit-4** & **digit-7**.
+The model could also not accurately predict the images **digit-4** & **digit-7** for task 2.
 - Refer [link1](https://github.com/AswinBalamurugan/MNIST_API/tree/main/predictions/task1) for task 1 prediction results.
 - Refer [link2](https://github.com/AswinBalamurugan/MNIST_API/tree/main/predictions/task2) for task 2 prediction results.
 
