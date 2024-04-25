@@ -66,6 +66,9 @@ async def predict(file: UploadFile = File(...)):
     contents = await file.read()
     nparr = np.frombuffer(contents, np.uint8)
     image = cv2.imdecode(nparr, cv2.IMREAD_GRAYSCALE)  # Read image as grayscale
+    # Check image dimensions (assuming 28x28 for MNIST)
+    if image.shape != (28, 28):
+        return {"error": "Image dimensions must be 28x28 pixels. Please resize the image."}
     image_data = image.reshape(1, 784)  # Serialize image as a list of 784 elements
     digit = predict_digit(model, image_data)
     return {"digit": digit}
